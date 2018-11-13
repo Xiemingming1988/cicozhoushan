@@ -1,0 +1,37 @@
+@CHARSET "UTF-8";
+
+/*人员详情页*/
+.page-content .list-block.address{margin-top:10px}
+.list.address .item-media{font-size:30px;padding: 3px 0;color:#4da0ff;}
+.list .item-content.person-message{padding-left:0;}
+.list .item-after .appduan{font-size:30px;color:#4DA0FF;line-height:30px;}
+#gerenxinxi.list.inset{margin: 10px;}
+#gerenxinxi.list.inset ul .icon-lianxiren{font-size:60px;color:#4DA0FF;}
+#gerenxinxi.list.inset ul .item-title{font-size:20px;color:#333;margin-top:10px;font-weight: normal;}
+#gerenxinxi.list.inset ul .item-subtitle{font-size:16px;color:#999;margin-top:3px;}
+#gerenxinxi.list.inset ul .item-media{padding: 5px 0;}
+.md #gerenxinxi.list.inset{background-color: #efefef;}
+#custom-userInfo.inline-labels .item-label{font-size: 16px; color: #999; width: 65px;}
+#custom-userInfo.inline-labels .item-label + .item-input-wrap{margin-left: 0; font-size: 16px; color: #333; white-space: normal;}
+#custom-userInfo.list .item-inner{padding-top: 13px; padding-bottom: 13px;}
+#custom-userInfo.links-list a{height: auto;}
+.md #custom-userInfo.links-list a:after{height: 0;}
+
+/*搜索页*/
+.searchtml .toolbar{top:0;height:40px;line-height:40px;background:#fff;}
+.searchtml .toolbar:befor{height:0;}
+.searchtml .tabbar-labels a.tab-link{padding-top:0;padding-bottom:0;color:#007aff;}
+.searchtml .tabbar-labels a.tab-link.tab-link-active{border-bottom:2px solid #007aff;color:#007aff;}
+.searchtml .list{height:calc(100% - 45px);overflow:auto;}
+.searchtml .searchlist{width:auto;margin:10px;border-radius:5px;background:#fff;}
+.searchtml .searchlist i[class^="icon"]{width:40px;height:40px;line-height:40px;font-size:36px;color:#4DA0FF;}
+.searchtml .searchlist .item-title{font-size:16px;color:#333;white-space: inherit;}
+.searchtml .searchlist .item-subtitle{font-size:13px;color:#999;margin-top:3px;}
+.searchtml .searchlist .item-after .appduan{font-size:30px;color:#4DA0FF;line-height:30px;position: absolute;top: 15px;right: 5px;}
+
+.list #dept-banner .item-title{overflow:visible;overflow-x:auto;text-overflow:inherit;}
+.list #dept-banner .item-title span{color:#aaa;margin:0 5px;}
+
+.list.links-list #addressDept a{white-space: normal;}
+    
+

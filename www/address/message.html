@@ -1,0 +1,80 @@
+
+<!-- App root element -->
+<div id="app">
+	<!-- Your main view, should have "view-main" class -->
+	<div class="view view-main">
+		<!-- Initial Page, "data-name" contains page name -->
+		<div data-name="txlMsg" class="page">
+
+			<!-- Top Navbar -->
+			<div class="navbar no-shadow">
+				<div class="navbar-inner">
+					<div class="left">
+						<a href="#" class="link back"><i class="icon icon-back"></i></a>
+					</div>
+					<div class="title">通讯录</div>
+					<div class="right">
+					</div>
+				</div>
+			</div>
+			
+			<div id="geren" class="page-content">
+				<div id="gerenxinxi" class="media-list list no-hairlines inset">
+					<ul>
+					    <li>
+					        <div class="item-content">
+					        	<div class="item-media"><i class="icon-lianxiren"></i></div>
+					        	<div class="item-inner">
+					          		<div class="item-title-row">
+							            <div class="item-title" v-cloak>{{isNull(personName)}}</div>
+						          	</div>
+						          	<div class="item-subtitle" v-cloak>{{isNull(deptname)}}</div>
+					        	</div>
+					      	</div>
+					    </li>
+				   	</ul>
+				</div>
+				
+				<div id="custom-userInfo" class="list links-list inline-labels no-hairlines-md">
+					<ul>
+						<li class="item-content item-input">
+							<div class="item-inner">
+								<div class="item-title item-label">姓名</div>
+								<div class="item-input-wrap" v-cloak>{{isNull(personName)}}</div>
+							</div>
+						</li>
+						<li class="item-content item-input">
+							<div class="item-inner">
+								<div class="item-title item-label">电话</div>
+								<div class="item-input-wrap appduan-tel" v-cloak>{{isNull(personTel)}}</div>
+								<div class="item-after"><i class="icon-appduan appduan"></i></div>
+							</div>
+						</li>
+						<li class="item-content item-input">
+							<div class="item-inner">
+								<div class="item-title item-label">邮箱</div>
+								<div class="item-input-wrap" v-cloak>{{isNull(personEmail)}}</div>
+							</div>
+						</li>
+						<li>
+							<a :id="isNull(deptmentId)" href="/address-list/" class="item-content item-input deptment">
+								<div class="item-inner">
+									<div class="item-title item-label">部门</div>
+									<div class="item-input-wrap" v-cloak>{{isNull(deptname)}}</div>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a id="8ae482b0570c60c201573fdd2b47018f" href="/address-zzjg/" class="item-content item-input">
+								<div class="item-inner">
+									<div class="item-title item-label">企业</div>
+									<div class="item-input-wrap">宁波舟山港主通道工程建设指挥部</div>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

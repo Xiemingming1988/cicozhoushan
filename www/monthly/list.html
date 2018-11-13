@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <META HTTP-EQUIV="pragma" CONTENT="no-cache"> 
+		<META HTTP-EQUIV="Cache-Control" CONTENT="no-cache"> 
+        <title>月报</title>
+        <link rel="stylesheet" href="../css2.0/framework7.css">
+        <link rel="stylesheet" href="../css2.0/framework7_adjust.css">
+        <link rel="stylesheet" href="../css2.0/custom.css">
+        <link rel="stylesheet" href="../css/iconfont.css">
+       	<link rel="stylesheet" href="../css/css.css">
+    </head>
+    <body>
+        <!-- App root element -->
+		<div id="app">
+			<!-- Statusbar overlay -->
+			<div class="statusbar"></div>
+		
+			<!-- Your main view, should have "view-main" class -->
+			<div class="view view-main">
+				<!-- Initial Page, "data-name" contains page name -->
+				<div data-name="ybList" class="page">
+		
+					<!-- Top Navbar -->
+					<div class="navbar no-shadow">
+						<div class="navbar-inner">
+							<div class="left">
+								<a href="#" class="link" id="backToIndex"><i class="icon-back"></i></a>
+							</div>
+							<div class="title">月报管理</div>
+							<div class="right">
+							</div>
+							<div class="subnavbar">
+								<!-- Searchbar with auto init -->
+								<form class="searchbar" action="" onsubmit="false">
+									<div class="searchbar-inner">
+										<div class="searchbar-input-wrap">
+											<input type="search" name="search" placeholder="搜索标题内容...">
+											<i class="searchbar-icon"></i>
+											<span class="input-clear-button"></span>
+										</div>
+										<span class="searchbar-search-button">搜索</span>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+	
+					<div class="page-content">
+						<div>
+						    <ul id="carListTab" class="custom-subnavbar">
+						    	<li style="width:50%" data-state="1" class="active">施工月报</li>
+						    	<li style="width:50%" data-state="2">监理月报</li>
+						    </ul>
+						</div>	
+						<div class="list links-list custom-contract">
+							<ul>
+								<li class="custom-contract-select"><a href="#"></a></li>
+								<input type="hidden" class="custom-contract-select-value" value="">
+							</ul>
+						</div>
+						<!-- Searchbar backdrop -->
+						<div class="searchbar-backdrop"></div>
+						
+						<!-- search target list -->
+						<div id="list" class="list media-list searchbar-found">
+							<ul></ul>
+							<div class="block-footer">
+							    <p></p>
+							</div>
+						</div>
+					</div>
+					<div class="custom-backToTop" onclick="backToTop()"><i class="icon-fanhuidingbu"></i></div>
+				</div>
+				<div class="custom-sheet-modal-cover"></div>
+			</div>
+		</div>
+        <script type="text/javascript" src="../js2.0/framework7.js"></script>
+        <script type="text/javascript" src="../js/jquery-1.11.3.js"></script>
+        <script type="text/javascript" src="../js/vue.js"></script>
+        <script type="text/javascript" src="../fonts/iconfont.js"></script>
+        <script type="text/javascript" src="../cordova.js"></script>
+        <script type="text/javascript" src="../js/util.js"></script>
+        <script type="text/javascript" src="../js/common.js"></script>
+        <script type="text/javascript" src="../js2.0/monthly.js"></script>
+    </body>
+
+</html>

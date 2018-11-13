@@ -1,0 +1,48 @@
+<!-- App root element -->
+<div id="app">
+	<!-- Statusbar overlay -->
+	<div class="statusbar"></div>
+
+	<!-- Your main view, should have "view-main" class -->
+	<div class="view view-main">
+		<!-- Initial Page, "data-name" contains page name -->
+		<div data-name="newsView" class="page">
+
+			<!-- Top Navbar -->
+			<div class="navbar no-shadow">
+				<div class="navbar-inner">
+					<div class="left">
+						<a href="#" class="link back"><i class="icon icon-back"></i></a>
+					</div>
+					<div class="title">图片新闻详情</div>
+					<div class="right">
+					</div>
+				</div>
+			</div>
+			
+			<div id="newsView" class="page-content">
+				<div class="banner">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" v-for="item in items" v-cloak><img :src="getu(item.filePath)" :alt="item.fileName"/></div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <div class="sek"></div>
+                </div>
+                <div class="text">
+                	<h3 style="text-align: center;" v-cloak>{{content.title}}</h3>
+                	<p v-cloak>{{content.content}}</p>
+                	<div class="view-info">
+                		<p v-cloak>来源：{{content.source}}</p>
+	                	<p v-cloak>发布日期：{{content.crtTime}}</p>
+	                	<p v-cloak>发布人：{{content.crtUserName}}</p>
+	                	<p v-cloak>发布单位：{{content.publicUnit}}</p>
+	                	<p v-cloak>是否公开：{{tranboolean(content.isPublic)}}</p>
+	                	<p v-cloak>是否置顶：{{tranboolean(content.isTop)}}</p>
+                	</div>
+                </div>
+			</div>
+		</div>
+	</div>
+</div>

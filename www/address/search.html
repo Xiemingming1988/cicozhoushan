@@ -1,0 +1,65 @@
+<!-- App root element -->
+<div id="app">
+	<!-- Statusbar overlay -->
+	<div class="statusbar"></div>
+
+	<!-- Your main view, should have "view-main" class -->
+	<div class="view view-main">
+		<!-- Initial Page, "data-name" contains page name -->
+		<div data-name="txlSearch" class="page">
+
+			<!-- Top Navbar -->
+			<div class="navbar no-shadow">
+				<div class="navbar-inner">
+					<div class="left">
+						<a href="#" class="link back"><i class="icon icon-back"></i></a>
+					</div>
+					<div class="title">通讯录</div>
+					<div class="right">
+					</div>
+					<div class="subnavbar">
+						<form id="searchBar" class="searchbar">
+							<div class="searchbar-inner">
+								<div class="searchbar-input-wrap">
+									<input class="searchname" type="search" placeholder="搜索姓名及部门..."> 
+									<i class="searchbar-icon"></i> <span class="input-clear-button"></span>
+								</div>
+								<span class="searchbar-disable-button">取消</span>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			
+			<div class="searchbar-backdrop"></div>
+			<div class="page-content" style="padding-bottom: 0;">
+				<div class="tabs searchtml">
+					<div class="toolbar tabbar-labels">
+						<div class="toolbar-inner">
+							<a href="#view-home" class="tab-link tab-link-active">联系人</a>
+							<a href="#view-catalog" class="tab-link">部门</a>
+						</div>
+					</div>
+					
+					<div id="view-home" class="tab tab-active">
+						<div class="media-list list no-hairlines search-list searchbar-found">
+							<ul id="searchPerson">
+							</ul>
+						</div>
+					</div>
+					<div id="view-catalog" class="tab">
+						<div class="list-group list no-hairlines search-list searchbar-found">
+							<ul id="searchDept">
+							</ul>
+						</div>
+					</div>
+					<div class="list simple-list searchbar-not-found">
+					    <ul>
+					        <li>无搜索结果</li>
+					    </ul>
+				    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

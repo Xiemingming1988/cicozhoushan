@@ -1,0 +1,56 @@
+<!-- App root element -->
+<div id="app">
+	<!-- Statusbar overlay -->
+	<div class="statusbar"></div>
+
+	<!-- Your main view, should have "view-main" class -->
+	<div class="view view-main">
+		<!-- Initial Page, "data-name" contains page name -->
+		<div data-name="txlList" class="page">
+
+			<!-- Top Navbar -->
+			<div class="navbar no-shadow">
+				<div class="navbar-inner">
+					<div class="left">
+						<a href="#" class="link back" id="backToIndex"><i class="icon icon-back"></i></a>
+					</div>
+					<div class="title">通讯录</div>
+					<div class="right">
+					</div>
+				</div>
+			</div>
+
+			<div class="page-content">
+				<!-- Searchbar backdrop -->
+				<div class="searchbar-backdrop"></div>
+				<form class="searchbar">
+					<div class="searchbar-inner">
+						<div class="searchbar-input-wrap">
+							<a href="/address-search/"><input readonly="readonly" type="search" placeholder="搜索">
+								<i class="searchbar-icon"></i></a>
+						</div>
+					</div>
+				</form>
+				<div class="list-block list no-hairlines">
+					<ul id="dept-banner">
+						<li>
+							<div class="item-content">
+								<div class="item-inner">
+									<div class="item-title">宁波舟山港主通道工程建设指挥部</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="list links-list list-block no-hairlines address">
+					<ul id="addressdeptlist">
+					</ul>
+				</div>
+				<div class="list no-hairlines address">
+					<ul id="addresspersonlist">
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

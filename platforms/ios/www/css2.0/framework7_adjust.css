@@ -1,0 +1,282 @@
+/* input[readonly=readonly],
+textarea[readonly=readonly]{
+	color: #666 !important;
+} */
+.ios .page{background: #f7f7f7;}
+.ios .navbar, .md .navbar{
+	background: #40A9FF;
+    color: #fff;
+}
+.ios .navbar:after{
+	height: 0;
+}
+.md .toolbar{
+    bottom: 0;
+    top: auto;
+    height: 55px;
+}
+.md .tabbar i.icon, .md .tabbar-labels i.icon{
+	font-size: 22px;
+}
+.icon-shouyeweixuanzhong{
+	font-size: 26px;
+}
+.ios .icon-back, .ios .icon-prev{
+    font-size: 26px;
+    color: #fff;
+    background-image: none !important;
+    height: auto;
+}
+.ios .navbar .left{
+	margin-right: 0;
+}
+.md .list, .ios .list{
+	margin: 0;
+}
+.ios .icon-radio, .md .icon-radio{
+	display: inline-block;
+	top: 5px;
+	-webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+.ios .radio span, .md .radio span{
+    position: relative;
+    margin-right: 10px;
+}
+.md .inline-labels .item-label, .md .inline-label .item-label, .md .inline-labels .item-floating-label, .md .inline-label .item-floating-label{
+	width: 33%;
+}
+.ios .list textarea.resizable.higher{
+	height: 68px;
+}
+.md .list textarea.resizable.higher{
+	height: 58px;
+}
+.ios .list .no-bottom-line .item-inner:after, .ios .list ul.no-bottom-line:after{
+	height: 0;
+}
+.ios .item-label-wrap{
+	width: 65%;
+	word-break: break-all;
+	white-space: normal;
+}
+.md .item-label-wrap{
+	width: 67%;
+	word-break: break-all;
+	white-space: normal;
+}
+.ios .item-title.long-text{
+	word-break: break-all;
+	white-space: normal;
+}
+.md .item-title.long-text{
+	word-break: break-all;
+	white-space: normal;
+}
+.ios .block-title{
+	margin: 10px 7px;
+}
+.md .block-title{
+	margin: 0px 7px;
+    padding: 10px 0px;
+}
+.md .block-title:after{
+	content: '';
+    position: absolute;
+    background-color: #c8c7cc;
+    display: block;
+    z-index: 15;
+    top: 35px;
+    right: auto;
+    bottom: auto;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    -webkit-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+}
+.ios .inline-labels .item-label{
+	font-size: 15px;
+}
+.md .inline-labels .item-label{
+	font-size: 15px;
+}
+.md .list.read-text .item-content{
+	min-height: 40px;
+}
+.md .list.read-text .item-inner{
+	min-height: 40px;
+	padding-bottom: 0px;
+}
+.md .list.read-text .item-label-wrap{
+	line-height: 20px;
+}
+.list .smart-select{
+	width: 100%;
+}
+.md .list .smart-select .item-title{
+	font-size: 15px;
+	color: rgba(0, 0, 0, 0.65);
+}
+.timeline-item-date{
+	width: 75px;
+}
+.infinite-scroll-preloader {
+  margin-top:-20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.infinite-scroll-preloader .preloader {
+  width:34px;
+  height:34px;
+}  
+.list-block .list-button.item-link{line-height: 23px;padding: 10px 15px;}
+.tabbar a.active i,
+.tabbar a.active span{
+	color: #40A9FF;
+}
+.tabbar .tab-link label i{
+	font-size: 22px;
+}
+.page-content.has-btn{
+	padding-bottom: 48px;
+}
+.md .list ul ul.radio-list, .ios .list ul ul.radio-list{
+	padding: 0;
+}
+.radio-list li{
+	padding: 5px 0;
+}
+input[readonly=readonly].readonly{
+	color: rgba(0, 0, 0, 0.65) !important;
+}
+.md .list .smart-select .item-after{
+	color: #000;
+	font-size: 16px;
+}
+.ios .list .smart-select .item-after{
+	color: #000;
+	font-size: 16px;
+	white-space: normal;
+	max-height: none;
+}
+.md .icon-back:before{
+	content: "";
+}
+#zclist.list .item-inner{
+	padding-bottom: 16px;
+	padding-top: 16px;
+}
+#zclist.list .item-inner .item-footer{
+	font-size: 14px;
+	color: #999;
+	padding-top: 6px;
+}
+.card{
+	border-radius: 4px;
+}
+.ios .card {
+    -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    border: none;
+}
+.card.read .item-input-wrap{
+	margin: 0 !important;
+	word-break: break-all;
+}
+.ios .card .item-title.item-label{
+	color: #999;
+}
+.md .card .item-input-wrap{
+	min-height: auto;
+}
+.ios .swipeout-actions-left .swipeout-delete-callback, 
+.ios .swipeout-actions-right .swipeout-delete-callback {
+	background: #ff3b30;
+}
+.md .swipeout-actions-left .swipeout-delete-callback, 
+.md .swipeout-actions-right .swipeout-delete-callback {
+	background: #f44336;
+}
+.ios .list textarea,
+.md .list textarea{
+	padding-right: 20px;
+}
+.ios .button.button-big, .ios .button.button-big-ios,
+.md .button.button-big, .md .button.button-big-md{
+	height: 49px;
+}
+.md .button.button-big, .md .button.button-big-md{
+	font-size: 16px;
+}
+.ios .button.button-fill, .ios .button.button-fill-ios,
+.md .button.button-fill, .md .button.button-fill-md {
+    background: #40A9FF;
+}
+.ios .list ul ul#add-name,
+.md .list ul ul#add-name {
+    padding-left: 0;
+}
+.popup{
+	overflow: auto;
+}
+.badge{width:60px;height:18px;border-radius:10px;background:#FCDFB1;/* color:#BF7600; */}
+.list .item-subtitle.wrap{
+	white-space: normal;
+}
+.ios div[class^='calendar'] .icon-prev {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20width%3D'12'%20height%3D'20'%20viewBox%3D'0%200%2012%2020'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cpath%20d%3D'M.18261596%209.4221638c.0352203-.05148305.07573462-.10050698.1215468-.14631917L9.1425872.4374202c.5830904-.58309038%201.52656832-.5849888%202.11643872.00488163.5857864.58578644.591222%201.53009836.0048816%202.11643873L3.82594417%209.9967039l7.43188553%207.4318855c.5830904.5830904.5849888%201.5265683-.0048817%202.1164387-.5857864.5857865-1.5300983.591222-2.11643868.0048816L.2980849%2010.7114853c-.3526746-.3526746-.3939974-.89699-.11546894-1.2893215z'%20fill%3D'%23007aff'%20fill-rule%3D'evenodd'%2F%3E%3C%2Fsvg%3E");
+	height:20px;
+}
+.block-footer{
+	text-align: center;
+}
+.ios .list .block-footer, .md .list .block-footer{
+	padding-bottom: 10px;
+}
+.searchbar-search-button{
+	width: 50px;
+    text-align: center;
+    color: #007aff;
+    padding-left: 8px;
+}
+.md .subnavbar .searchbar input[type="search"]{
+	padding: 0 55px;
+}
+.md .searchbar-search-button{
+	width: 60px;
+	padding-right: 8px;
+}
+.md .subnavbar, .md .searchbar{
+	height: 42px;
+}
+.ios .photo-browser .icon-back,
+.md .photo-browser .icon-back{
+	line-height: 30px;
+}
+#list.list .item-title,
+#zclist.list .item-title{
+	white-space: normal;
+	padding: 6px 3px;
+	/* text-align: justify; */
+	font-weight: bold;
+}
+.ios #list.list .item-footer{
+	margin-top: 13px;	
+}
+.ios .picker-columns{
+	font-size: 20px;
+}
+.ios .list .item-text.custom-text-right,
+.md .list .item-text.custom-text-right{
+	max-height: none;
+}
+.ios .list textarea.resizable{
+	height: 68px;
+}
+.md .list textarea.resizable{
+	height: 58px;
+}

@@ -1,0 +1,136 @@
+<!-- App root element -->
+<div id="app">
+	<!-- Statusbar overlay -->
+	<div class="statusbar"></div>
+
+	<!-- Your main view, should have "view-main" class -->
+	<div class="view view-main">
+		<!-- Initial Page, "data-name" contains page name -->
+		<div data-name="dbView" class="page">
+
+			<!-- Top Navbar -->
+			<div class="navbar no-shadow">
+				<div class="navbar-inner">
+					<div class="left">
+						<a href="#" class="link back"><i class="icon-back"></i></a>
+					</div>
+					<div class="title">整改督办详情</div>
+					<div class="right">
+					</div>
+				</div>
+			</div>
+			
+			<div class="page-content">
+				<div class="page-con">
+					<div id="view" class="card read">
+						<div class="card-header" v-cloak><b>{{title}}</b></div>
+						<div class="card-content">
+							<div class="list inline-labels no-hairlines-md">
+								<ul>
+									<li class="item-content item-input">
+										<div class="item-inner">
+											<div class="item-title item-label">责任单位</div>
+											<div class="item-input-wrap" v-cloak>{{dutyDept}}</div>
+										</div>
+									</li>
+									<li class="item-content item-input">
+										<div class="item-inner">
+											<div class="item-title item-label">责任人</div>
+											<div class="item-input-wrap" v-cloak>{{dutyPerson}}</div>
+										</div>
+									</li>
+									<li class="item-content item-input">
+										<div class="item-inner">
+											<div class="item-title item-label">督办人</div>
+											<div class="item-input-wrap" v-cloak>{{supervisePerson}}</div>
+										</div>
+									</li>
+									<li class="item-content item-input">
+										<div class="item-inner">
+											<div class="item-title item-label">规定时限</div>
+											<div class="item-input-wrap" v-cloak>{{timeLimit}}</div>
+										</div>
+									</li>
+									<li class="item-content item-input">
+										<div class="item-inner">
+											<div class="item-title item-label">完成状态</div>
+											<div class="item-input-wrap" v-cloak>{{finishStatus}}</div>
+										</div>
+									</li>
+									<li class="item-content item-input">
+										<div class="item-inner">
+											<div class="item-title item-label">计划完成时间</div>
+											<div class="item-input-wrap" v-cloak>{{planFinishTime}}</div>
+										</div>
+									</li>
+									<li class="item-content item-input">
+										<div class="item-inner">
+											<div class="item-title item-label">实际完成时间</div>
+											<div class="item-input-wrap" v-cloak>{{acturalFinishTime}}</div>
+										</div>
+									</li>
+									<li class="item-content item-input">
+										<div class="item-inner">
+											<div class="item-title item-label">登记人</div>
+											<div class="item-input-wrap" v-cloak>{{crtUserName}}</div>
+										</div>
+									</li>
+									<li class="item-content item-input">
+										<div class="item-inner">
+											<div class="item-title item-label">登记时间</div>
+											<div class="item-input-wrap" v-cloak>{{crtTime}}</div>
+										</div>
+									</li>
+									<li class="item-content item-input">
+										<div class="item-inner">
+											<div class="item-title item-label">完成情况</div>
+											<div class="item-input-wrap" v-cloak>{{finishContent}}</div>
+										</div>
+									</li>
+									<li class="item-content item-input">
+										<div class="item-inner">
+											<div class="item-title item-label">内容</div>
+											<div id="content" class="item-input-wrap"></div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="content-box card" id="fileList" v-cloak>
+                        <div class="content-title">附件（{{num}}）</div>
+                        <div :class="detClass">
+                            <div class="file-list">
+                                <table class="file-table" width="100%" cellpadding="0" cellspacing="0" border="0">
+	                                <tbody v-for="(list,index) in lists">
+	                                    <tr>
+	                                        <td rowspan="2" width="30"><svg class="icon" aria-hidden="true" ><use :xlink:href="list.icon"></use></svg></td>
+	                                        <td colspan="2">{{list.title}}</td>
+	                                    </tr>
+	                                    <tr>
+	                                        <td>{{list.size}}</td>
+	                                        <td width="40" align="right">
+	                                            <a @click="viewPic(list.url)" href="#" v-if="list.type=='jpg' || list.type=='jpeg' || list.type=='png' || list.type=='gif' || list.type=='mp4'"><i class="icon-yulan"></i> 预览</a>
+	                                            <a v-show="false" @click="online(list.url, list.title)" href="#" data-popup=".popup-online" class="popup-open" v-if="list.type=='doc' || list.type=='docx' || list.type=='xls' || list.type=='xlsx' || list.type=='pdf'"><i class="icon-yulan"></i> 预览</a>
+	                                            <a @click="downLoad(list.id,list.title)" href="#" v-if="list.type!='jpg' && list.type!='jpeg' && list.type!='png' && list.type!='gif' &&　list.type!='mp4'"><i class="icon-xiazai"></i> 下载</a>
+	                                        </td>
+	                                    </tr>
+	                                    <tr class="border-bottom">
+	                                    	<td colspan="3"></td>
+	                                    </tr>
+	                                </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+			</div>
+
+			<div class="popup popup-online">
+				<div class="custom-head popup-close"><i class="icon-back"></i><span> 返回</span></div>
+				<iframe name="online" width="100%" height="100%" frameborder="0"></iframe>
+			</div>
+
+		</div>
+	</div>
+</div>

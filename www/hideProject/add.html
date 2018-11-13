@@ -1,0 +1,122 @@
+<!-- App root element -->
+<div id="app">
+	<!-- Statusbar overlay -->
+	<div class="statusbar"></div>
+
+	<!-- Your main view, should have "view-main" class -->
+	<div class="view view-main">
+		<!-- Initial Page, "data-name" contains page name -->
+		<div data-name="ybAdd" class="page">
+
+			<!-- Top Navbar -->
+			<div class="navbar no-shadow">
+				<div class="navbar-inner">
+					<div class="left">
+						<a href="#" class="link back"><i class="icon-back"></i></a>
+					</div>
+					<div class="title">新增隐蔽工程</div>
+					<div class="right">
+					</div>
+				</div>
+			</div>
+			
+			<div class="page-content has-btn">
+				<div id="ybAdd">
+					<div class="list inline-labels no-hairlines-md">
+						<ul>
+							<li class="item-content item-input">
+								<div class="item-inner">
+									<div class="item-title item-label"><span class="red-font">*</span> 标段</div>
+									<div class="item-input-wrap">
+										<input type="text" placeholder="请在列表页选择标段..." readonly="readonly" id="section" name="section" value=""/>
+										<input type="hidden" name="section_id" id="section_id" value="" required validate data-error-message="输入不能为空。">
+									</div>
+								</div>
+							</li>
+							<li class="item-content item-input">
+								<div class="item-inner">
+									<div class="item-title item-label"><span class="red-font">*</span> 签证单编号</div>
+									<div class="item-input-wrap">
+										<input type="text" id="signno" name="signno" placeholder="输入签证单编号..." value="" required validate data-length="200" data-error-message="输入不能为空。"/>
+										<span class="input-clear-button"></span>
+									</div>
+								</div>
+							</li>
+							<li class="item-content item-input">
+								<div class="item-inner">
+									<div class="item-title item-label"><span class="red-font">*</span> 工程名称</div>
+									<div class="item-input-wrap">
+										<input type="text" id="name" name="name" placeholder="输入工程名称..." value="" required validate data-length="400" data-error-message="输入不能为空。"/>
+										<span class="input-clear-button"></span>
+									</div>
+								</div>
+							</li>
+							<li class="item-content item-input">
+								<div class="item-inner">
+									<div class="item-title item-label"><span class="red-font">*</span> 工程部位</div>
+									<div class="item-input-wrap">
+										<input type="text" id="eng_area" name="eng_area" placeholder="输入工程部位..." value="" required validate data-length="400" data-error-message="输入不能为空。"/>
+										<span class="input-clear-button"></span>
+									</div>
+								</div>
+							</li>
+							<li class="item-content item-input">
+								<div class="item-inner">
+									<div class="item-title item-label"><span class="red-font">*</span> 检查项目</div>
+									<div class="item-input-wrap">
+										<input type="text" id="checkproject" name="checkproject" placeholder="输入检查项目..." value="" required validate data-length="400" data-error-message="输入不能为空。"/>
+										<span class="input-clear-button"></span>
+									</div>
+								</div>
+							</li>
+							<li class="item-content item-input">
+								<div class="item-inner">
+									<div class="item-title item-label"><span class="red-font">*</span> 检查范围</div>
+									<div class="item-input-wrap">
+										<input type="text" id="checkarea" name="checkarea" placeholder="输入检查范围..." value="" required validate data-length="400" data-error-message="输入不能为空。"/>
+										<span class="input-clear-button"></span>
+									</div>
+								</div>
+							</li>
+							<li class="item-content item-input">
+								<div class="item-inner">
+									<div class="item-title item-label"><span class="red-font">*</span> 设计图号</div>
+									<div class="item-input-wrap">
+										<input type="text" id="designno" name="designno" placeholder="输入设计图号..." value="" required validate data-length="400" data-error-message="输入不能为空。"/>
+										<span class="input-clear-button"></span>
+									</div>
+								</div>
+							</li>
+							<li class="item-content item-input">
+								<div class="item-inner">
+									<div class="item-title item-label"><span class="red-font">*</span> 起止桩号</div>
+									<div class="item-input-wrap">
+										<input type="text" id="stakemark" name="stakemark" placeholder="输入起止桩号..." value="" required validate data-length="400" data-error-message="输入不能为空。"/>
+										<span class="input-clear-button"></span>
+									</div>
+								</div>
+							</li>
+							<li class="item-content item-input no-bottom-line">
+								<div class="item-inner">
+									<div class="item-title item-label"><span class="white-font">*</span> 添加照片</div>
+								</div>
+							</li>
+							<li class="item-content item-input">
+								<div class="custom-photos">
+									<div id="addPhoto" class="custom-photo"><i class="icon-xinzeng2"></i></div>
+								</div>
+								<form id="uploadFile">
+								</form>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="custom-fixed-bottom-btn">
+				<p class="segmented segmented-raised">
+				    <button id="save" class="button button-fill button-big">保存</button>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>

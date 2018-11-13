@@ -1,0 +1,226 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>登录页</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/iconfont.css">
+    <link type="text/css" href="css/css.css" rel="stylesheet">
+    <style>
+		*{margin:0;padding:0;list-style:none;}
+		html, body{width: 100%;height: 100%;}
+		a, input, select, textarea{outline: 0;}
+		.page{box-sizing: border-box;position: absolute;left: 0;top: 0;width: 100%;height: 100%;background: #efeff4;-webkit-transform: translate3d(0,0,0);transform: translate3d(0,0,0);}
+		.login{position:absolute;background:white;padding:0 10%;width:85%;height: 246px;top: 36%;left:50%;transform:translate(-50%,0);z-index:100;box-sizing: border-box;box-shadow: 0px 0px 15px #bbb;border-radius: 10px;}
+		.sek{height:500%;width:500%;}
+		.login-t{transition: all 0.5s;height: 50%;width: 100%;position: relative;overflow: hidden;background: url(img/login-bg.png) no-repeat 0 0;background-size: 100% 100%;}
+		.login-t .login-title{position: absolute;width: 85%;left: 10%;top: 30%;}
+		.login-t .login-title h1, .login-t .login-title h2{font-weight: normal;color: #fff;margin: 0;padding: 5px 0;}
+		.login-t .login-title h1{font-size: 30px;}
+		.login-t .login-title h2{font-size: 26px;}
+		.logo{height:44%;z-index:10;position:absolute;top:44%;left:50%;transform:translate(-50%,-50%);transition:all 0.5s}
+		.login label{font-size:17px;color:#999;position:absolute;bottom:2px;left:2%;pointer-events: none;transition: all 0.5s;}
+		.login input{margin-bottom: 0;border-radius: 0;height: 25px;box-shadow: none;font-size:17px;box-sizing: border-box;padding:2px 15% 2px 2%;border-width:0 0 1px 0;border-style: solid;border-color: #ccc;width:100%;}
+		.login img{position:absolute;}
+		.name{width:12px;height:14px;}
+		.pwd{width:14px;height:9px;}
+		.login>button{width:85%;height:48px;position:absolute;left:50%;bottom:50px;transform: translate(-50%,50%);border-radius:25px;background:#40A9FF;border:none;font-size:17px;color:white;outline: none;letter-spacing: 20px;text-indent: 20px;text-align: center;}
+		.div-box{position:relative;margin-top:40px;}
+		.div-box>img{position:absolute;right:5%;bottom:8px;}
+		.messages{color:red;padding: 10px 5px;font-size: 12px;}
+		.scan{position: absolute;top:5px;right: 10px;color: #fff;font-size: 14px;}
+		.scan i{font-size: 40px;display: block;}
+    </style>
+</head>
+<body>
+<div id="aside_container">
+</div>
+<div id="section_container">
+    <section id="login_section" class="active">
+        <div class="login-t">
+	        <div class="login-title">
+	        	<h2>欢迎来到</h2>
+	        	<h1>舟山动态管理系统</h1>
+	        </div>
+	    </div>
+        <div class="indented">
+            <form id="loginForm" method="post">
+				<input type="hidden" name="registrationid"/>
+                <div class="login">
+			        <div class="div-box">
+			            <label>用户名</label>
+			            <input id="username" type="text" name="username" class="input_text" />
+			            <img src="img/name.png" alt="" class="name"/>
+			        </div>
+			        <div class="div-box">
+			            <label>密码</label>
+			            <input id="password" type="password" name="password" class="upwd input_text"/>
+			            <img src="img/b.png" alt="" class="pwd"/>
+			        </div>
+			        <div class="div-box" id="validateCodeDiv" style="margin-top: 20px;display:none;">
+		                <div class="input-row">
+		                    <sys:validateCode name="validateCode" inputCssStyle="margin-bottom:0;width:60%;height:32px;border:1px #999 solid;font-weight:normal;"
+		                    imageCssStyle="padding-top:3px;padding-left:calc(20% - 35px);" />
+		                </div>
+		            </div>
+		            <input type="hidden" name="mobileLogin" value="true">
+		            <button id="btn">登录</button>
+			    </div>
+            </form>
+        </div>
+    </section>
+</div>
+<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/util.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript">
+var registrationid = '';
+document.addEventListener("deviceready", onDeviceReady, false);
+$(function(){
+	$('.div-box>input.input_text').each(function(){
+		if($(this).val() != '') {
+			$(this).prev().css({
+				bottom: '25px',
+				fontSize: '13px'
+			});
+		}
+	});
+	$('.pwd').click(function() {
+		var e = $('.upwd');
+		if(e.attr('type') == 'password') {
+			e.attr('type', 'text');
+			e.next().attr('src', 'img/mm.png');
+		} else {
+			e.attr('type', 'password');
+			e.next().attr('src', 'img/b.png');
+		}
+	})
+	$('.div-box>input').focus(function() {
+		var e = $(this);
+		e.prev().css({
+			bottom: '25px',
+			fontSize: '13px'
+		});
+	})
+	$('.div-box>input').blur(function() {
+		var e = $(this);
+		if(e.val() == '') {
+			e.prev().css({
+				bottom: '2px',
+				fontSize: '17px'
+			});
+		}
+	});
+	
+	$("#loginForm").submit(function(){
+		if ($('#username').val() == ''){
+			tips('请填写账号');
+		}else if ($('#password').val() == ''){
+			tips('请填写密码');
+		}else if ($('#validateCodeDiv').is(':visible') && $('#validateCode').val() == ''){
+			tips('请填写验证码');
+		}else{
+			$.ajax({
+				"method": "post",
+				"url": _url + "mobileLogin.action",
+				"data": $("#loginForm").serialize(),
+				"dataType": "jsonp",
+				"success": function(data){
+					if(data.flag){
+						localStorage.setItem('username', $('#username').val());
+						localStorage.setItem('password', $('#password').val());
+						localStorage.setItem('projectId', data.data.projectId);
+						localStorage.setItem('projectName', data.data.projectName);
+						localStorage.setItem('phone', data.data.phone);
+						localStorage.setItem('remark', data.data.remark);
+						localStorage.setItem('email', data.data.email);
+						localStorage.setItem('name', data.data.name);
+						localStorage.setItem('orgName', data.data.orgName);
+						localStorage.setItem('positionName', data.data.positionName);
+						localStorage.setItem('role', data.data.type);
+						tips('登录成功！', function(){
+							window.location.href = 'index.html';
+						});
+					}else{
+						localStorage.setItem('username', '');
+						localStorage.setItem('password', '');
+						localStorage.setItem('projectId', '');
+						localStorage.setItem('projectName', '');
+						localStorage.setItem('phone', '');
+						localStorage.setItem('remark', '');
+						localStorage.setItem('email', '');
+						localStorage.setItem('name', '');
+						localStorage.setItem('orgName', '');
+						localStorage.setItem('positionName', '');
+						localStorage.setItem('role', '');
+						tips(data.data);
+					}
+				},
+				"error": function(e){
+					localStorage.setItem('username', '');
+					localStorage.setItem('password', '');
+					localStorage.setItem('projectId', '');
+					localStorage.setItem('projectName', '');
+					localStorage.setItem('phone', '');
+					localStorage.setItem('remark', '');
+					localStorage.setItem('email', '');
+					localStorage.setItem('name', '');
+					localStorage.setItem('orgName', '');
+					localStorage.setItem('positionName', '');
+					localStorage.setItem('role', '');
+					tips('系统出现点问题，请稍后再试');
+				}
+			});
+		}
+		return false;
+	});
+});
+
+function onDeviceReady() {
+    //初始化推送
+    document.addEventListener("jpush.receiveRegistrationId", function (event) {
+    	registrationid = event.registrationId;
+        $('input[name=registrationid]').val(event.registrationId);
+    }, false);
+    initiateUI();
+}
+
+var initiateUI = function() {
+   try {
+     window.JPush.init();
+     window.JPush.setDebugMode(true);
+     window.setTimeout(getRegistrationID, 1000);
+
+     if (device.platform != "Android") {
+       window.JPush.setApplicationIconBadgeNumber(0);
+     }
+   } catch (exception) {
+     console.log(exception);
+   }
+}
+
+var getRegistrationID = function() {
+  window.JPush.getRegistrationID(onGetRegistrationID);
+};
+
+var onGetRegistrationID = function(data) {
+	try {
+	  	registrationid = data;
+	  	$('input[name=registrationid]').val(data);
+	  	
+	  	//单点登录
+	  	if (localStorage.getItem("username") != '' && localStorage.getItem("username") != null && registrationid != ''){
+	  		tips('您已登录，正在跳转...', function(){
+				window.location.href = 'index.html';
+			});
+		}else{
+			$('#login_article').addClass('active');
+		}
+	} catch (exception) {
+	  	console.log(exception);
+	}
+};
+
+</script>
+</body>
+</html>

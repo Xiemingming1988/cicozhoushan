@@ -1,0 +1,194 @@
+<!-- App root element -->
+<div id="app">
+	<!-- Statusbar overlay -->
+	<div class="statusbar"></div>
+
+	<!-- Your main view, should have "view-main" class -->
+	<div class="view view-main">
+		<!-- Initial Page, "data-name" contains page name -->
+		<div data-name="dbEdit" class="page">
+
+			<!-- Top Navbar -->
+			<div class="navbar no-shadow">
+				<div class="navbar-inner">
+					<div class="left">
+						<a href="#" class="link back"><i class="icon-back"></i></a>
+					</div>
+					<div class="title">修改整改督办</div>
+					<div class="right">
+					</div>
+				</div>
+			</div>
+			
+			<div class="page-content has-btn">
+				<div id="dbEdit">
+					<div class="list inline-labels no-hairlines-md">
+						<ul>
+							<li class="item-content item-input">
+								<div class="item-inner">
+									<div class="item-title item-label"><span class="red-font">*</span> 标段</div>
+									<div class="item-input-wrap">
+										<input type="text" placeholder="请在列表页选择标段..." readonly="readonly" id="section" name="section" value=""/>
+										<input type="hidden" name="sectionId" id="sectionId" value="" required validate data-error-message="输入不能为空。">
+									</div>
+								</div>
+							</li>
+							<li class="item-content item-input">
+								<div class="item-inner">
+									<div class="item-title item-label"><span class="red-font">*</span> 标题</div>
+									<div class="item-input-wrap">
+										<input type="text" id="title" name="title" placeholder="输入标题..." value="" required validate data-length="200" data-error-message="输入不能为空。"/>
+										<span class="input-clear-button"></span>
+									</div>
+								</div>
+							</li>
+							<li class="item-content item-input">
+								<div class="item-inner">
+									<div class="item-title item-label"><span class="red-font">*</span> 责任单位</div>
+									<div class="item-input-wrap">
+										<input type="text" id="dutyDept" name="dutyDept" placeholder="输入责任单位..." value="" required validate data-length="200" data-error-message="输入不能为空。"/>
+										<span class="input-clear-button"></span>
+									</div>
+								</div>
+							</li>
+							<li class="item-content item-input">
+								<div class="item-inner">
+									<div class="item-title item-label"><span class="red-font">*</span> 责任人</div>
+									<div class="item-input-wrap">
+										<input type="text" id="dutyPerson" name="dutyPerson" placeholder="输入责任人..." value="" required validate data-length="200" data-error-message="输入不能为空。"/>
+										<span class="input-clear-button"></span>
+									</div>
+								</div>
+							</li>
+							<li class="item-content item-input">
+								<div class="item-inner">
+									<div class="item-title item-label"><span class="red-font">*</span> 督办人</div>
+									<div class="item-input-wrap">
+										<input type="text" id="supervisePerson" name="supervisePerson" placeholder="输入督办人..." value="" required validate data-length="200" data-error-message="输入不能为空。"/>
+										<span class="input-clear-button"></span>
+									</div>
+								</div>
+							</li>
+							<li class="item-content item-input">
+								<div class="item-inner">
+									<div class="item-title item-label"><span class="red-font">*</span> 规定时限</div>
+									<div class="item-input-wrap">
+										<input type="text" id="timeLimit" name="timeLimit" placeholder="输入规定时限..." value="" required validate data-length="200" data-error-message="输入不能为空。"/>
+										<span class="input-clear-button"></span>
+									</div>
+								</div>
+							</li>
+							<li class="item-content item-input">
+								<div class="item-inner">
+									<div class="item-title item-label"><span class="red-font">*</span> 完成状态</div>
+									<div class="item-input-wrap">
+										<select id="finishStatus">
+											<option value="0">未解决</option>
+											<option value="1">进行中</option>
+											<option value="2">已解决</option>
+										</select>
+									</div>
+								</div>
+							</li>
+							<li class="item-content item-input">
+								<div class="item-inner">
+									<div class="item-title item-label"><span class="red-font">*</span> 计划完成时间</div>
+									<div class="item-input-wrap">
+										<input type="text" id="planFinishTime" name="planFinishTime" placeholder="选择计划完成时间..." readonly="readonly"/>
+									</div>
+								</div>
+							</li>
+							<li class="item-content item-input">
+								<div class="item-inner">
+									<div class="item-title item-label"><span class="white-font">*</span> 实际完成时间</div>
+									<div class="item-input-wrap">
+										<input type="text" id="acturalFinishTime" name="acturalFinishTime" placeholder="选择实际完成时间..." readonly="readonly"/>
+										<span class="input-clear-button"></span>
+									</div>
+								</div>
+							</li>
+							<li class="item-content item-input">
+								<div class="item-inner">
+									<div class="item-title item-label"><span class="white-font">*</span> 完成情况</div>
+									<div class="item-input-wrap">
+										<textarea id="finishContent" class="resizable" placeholder="输入完成情况..." validate data-length="2000"></textarea>
+										<span class="input-clear-button"></span>
+									</div>
+								</div>
+							</li>
+							<li class="item-content item-input">
+								<div class="item-inner">
+									<div class="item-title item-label"><span class="white-font">*</span> 内容</div>
+									<div class="item-input-wrap">
+										<textarea id="content" class="resizable" placeholder="输入内容..."></textarea>
+										<span class="input-clear-button"></span>
+										<div id="content-Tran" class="hide"></div>
+									</div>
+								</div>
+							</li>
+							<li class="item-content item-input zl hide">
+								<div class="item-inner">
+									<div class="item-title item-label"><span class="white-font">*</span> 登记人</div>
+									<div class="item-input-wrap">
+										<input type="text" id="crtName" name="crtName" placeholder="默认登录人..." readonly="readonly">
+									</div>
+								</div>
+							</li>
+							<li class="item-content item-input zl hide">
+								<div class="item-inner">
+									<div class="item-title item-label"><span class="white-font">*</span> 登记时间</div>
+									<div class="item-input-wrap">
+										<input type="text" id="crtTime" name="crtTime" placeholder="默认当前时间..." readonly="readonly"/>
+									</div>
+								</div>
+							</li>
+							<li class="item-content item-input no-bottom-line">
+								<div class="item-inner">
+									<div class="item-title item-label"><span class="white-font">*</span> 添加照片</div>
+								</div>
+							</li>
+							<li class="item-content item-input">
+								<div class="custom-photos">
+									<div id="addPhoto" class="custom-photo"><i class="icon-xinzeng2"></i></div>
+								</div>
+								<form id="uploadFile">
+								</form>
+							</li>
+						</ul>
+					</div>
+					<div class="content-box" id="fileList" v-cloak>
+                        <div class="content-title">附件（{{num}}）</div>
+                        <div :class="detClass">
+                            <div class="file-list">
+                                <table class="file-table" width="100%" cellpadding="0" cellspacing="0" border="0">
+	                                <tbody v-for="(list,index) in lists">
+	                                    <tr>
+	                                        <td rowspan="2" width="30"><svg class="icon" aria-hidden="true" ><use :xlink:href="list.icon"></use></svg></td>
+	                                        <td colspan="2">{{list.title}}</td>
+	                                    </tr>
+	                                    <tr>
+	                                        <td>{{list.size}}</td>
+	                                        <td width="40" align="right">
+	                                            <a v-show="false" @click="viewPic(list.url)" href="#" v-if="list.type=='jpg' || list.type=='jpeg' || list.type=='png' || list.type=='gif'"><i class="icon-yulan"></i> 预览</a>
+	                                            <a v-show="false" @click="online(list.url, list.title)" href="#" data-popup=".popup-online" class="popup-open" v-if="list.type=='doc' || list.type=='docx' || list.type=='xls' || list.type=='xlsx' || list.type=='pdf'"><i class="icon-yulan"></i> 预览</a>
+	                                            <a @click="downLoad(list.id,list.title)" href="#" v-if="list.type!='jpg' && list.type!='jpeg' && list.type!='png' && list.type!='gif'"><i class="icon-xiazai"></i> 下载</a>
+	                                        </td>
+	                                    </tr>
+	                                    <tr class="border-bottom">
+	                                    	<td colspan="3"></td>
+	                                    </tr>
+	                                </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+			</div>
+			<div class="custom-fixed-bottom-btn">
+				<p class="segmented segmented-raised">
+				    <button id="save" class="button button-fill button-big">保存</button>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>

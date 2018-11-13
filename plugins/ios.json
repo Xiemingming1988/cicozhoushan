@@ -1,0 +1,42 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "com.kingee.zhoushan"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.kingee.zhoushan"
+    },
+    "cordova-plugin-file-opener2": {
+      "PACKAGE_NAME": "com.kingee.zhoushan"
+    },
+    "cordova-plugin-file-transfer": {
+      "PACKAGE_NAME": "com.kingee.zhoushan"
+    },
+    "cordova-plugin-imagepicker": {
+      "CAMERA_USAGE_DESCRIPTION": " ",
+      "PHOTOLIBRARY_USAGE_DESCRIPTION": " ",
+      "PACKAGE_NAME": "com.kingee.zhoushan"
+    },
+    "cordova-plugin-media": {
+      "KEEP_AVAUDIOSESSION_ALWAYS_ACTIVE": "NO",
+      "PACKAGE_NAME": "com.kingee.zhoushan"
+    },
+    "cordova-plugin-media-capture": {
+      "PACKAGE_NAME": "com.kingee.zhoushan"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.kingee.zhoushan"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.kingee.zhoushan"
+    }
+  },
+  "dependent_plugins": {}
+}

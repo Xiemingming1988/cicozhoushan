@@ -1,0 +1,69 @@
+{
+  "_from": "git+https://github.com/Xiemingming1988/cordova-plugin-ImagePicker.git",
+  "_id": "cordova-plugin-imagepicker@1.1.5",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/cordova-plugin-imagepicker",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "https://github.com/Xiemingming1988/cordova-plugin-ImagePicker.git",
+    "rawSpec": "https://github.com/Xiemingming1988/cordova-plugin-ImagePicker.git",
+    "saveSpec": "git+https://github.com/Xiemingming1988/cordova-plugin-ImagePicker.git",
+    "fetchSpec": "https://github.com/Xiemingming1988/cordova-plugin-ImagePicker.git",
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/Xiemingming1988/cordova-plugin-ImagePicker.git#f7ebe24163091e3cdc43cb3677b4d76deb08185d",
+  "_spec": "https://github.com/Xiemingming1988/cordova-plugin-ImagePicker.git",
+  "_where": "/Users/admin/Documents/kingeeApp/zhoushanapp",
+  "author": {
+    "name": "giantss"
+  },
+  "bugs": {
+    "url": "https://github.com/giantss/cordova-plugin-ImagePicker/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-plugin-imagepicker",
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  },
+  "dependencies": {
+    "async": "^2.6.0"
+  },
+  "deprecated": false,
+  "description": "Cordova ImagePicker Plugin",
+  "devDependencies": {
+    "jshint": "^0.1.8"
+  },
+  "engines": {
+    "cordovaDependencies": {
+      "1.0.0": {
+        "cordova-android": ">6.0.0"
+      },
+      "2.0.0": {
+        "cordova": ">100"
+      }
+    }
+  },
+  "homepage": "https://github.com/giantss/cordova-plugin-ImagePicker#readme",
+  "keywords": [
+    "cordova",
+    "cordova-ios",
+    "cordova-android",
+    "ImagePicker"
+  ],
+  "license": "Apache-2.0",
+  "name": "cordova-plugin-imagepicker",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giantss/cordova-plugin-ImagePicker.git"
+  },
+  "version": "1.1.5"
+}
